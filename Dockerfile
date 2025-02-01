@@ -13,9 +13,21 @@ RUN pip install -r requirements.txt
 EXPOSE 5000
 
 
+
+# Defining Environment variables:
+
+# SQL DB connection str:
+ENV sqlConnStr=${mongoDbConnStr}
+# Mongo DB connection str:
+ENV mongoDbConnStr=${mongoDbConnStr}
+
+# Hardcoded env varibles-NO NEED TO MODIFY
+ENV metadataDbName="metadataDB"
+ENV configDbName="priority_dwh_admin"
+ENV configCollectionName="configCollection"
+ENV datatypeMappingCollectionName="datatypeMapping"
+
+
+
 # run the flask app
 CMD ["python", "app.py"]
-
-
-
-
