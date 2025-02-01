@@ -3,7 +3,6 @@ import os
 from functools import wraps
 
 import requests
-from dotenv import load_dotenv
 from flask import Flask, g, jsonify, request
 from pymongo import MongoClient
 from requests.auth import HTTPBasicAuth
@@ -12,10 +11,6 @@ from resources import mongodbHelper
 #custom libraries
 from resources.priorityDataSource import priorityDataSource
 from resources.sqlDwh import sqlDwh
-
-# Load .env file
-load_dotenv()
-
 
 
 #importing the variables names from the .env file
