@@ -3,7 +3,6 @@ __pycache__/
 **/__pycache__/
 
 #adding .gitignore to prevent the gitignore file to be commited to the repo.
-.env
 .vscode
 .venv
 .venv_priority_data_pipeline
